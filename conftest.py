@@ -1,0 +1,13 @@
+"""Pytest configuration.
+
+Adds the repo root to sys.path so `from solutions import ...` resolves when
+running `python -m pytest` from the repo root, regardless of how pytest is
+invoked.
+"""
+
+import os
+import sys
+
+REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+if REPO_ROOT not in sys.path:
+    sys.path.insert(0, REPO_ROOT)
