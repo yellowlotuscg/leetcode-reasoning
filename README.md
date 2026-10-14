@@ -72,6 +72,9 @@ prerequisites.
 
 ```
 leetcode-reasoning/
+├── .github/
+│   └── workflows/
+│       └── tests.yml          pytest on Python 3.9 and 3.12
 ├── solutions/                 one module per problem
 │   ├── two_sum.py
 │   ├── group_anagrams.py
@@ -108,12 +111,22 @@ Each solution module carries the problem statement in my own words, a short
 reasoning section on why I chose the approach, and the time and space
 complexity with a one line justification.
 
+## Get a copy
+
+```
+git clone https://github.com/yellowlotuscg/leetcode-reasoning.git
+cd leetcode-reasoning
+```
+
 ## Running the tests
 
 From the repo root:
 
 ```
-python -m pytest
+python3 -m pip install pytest
+python3 -m pytest
 ```
 
-The solutions target Python 3.9 and use only the standard library.
+The solutions target Python 3.9 and use only the standard library. Pytest is
+not part of that library, so install it before you run the suite. The same
+tests run on GitHub Actions for Python 3.9 and 3.12.
